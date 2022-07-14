@@ -1,0 +1,45 @@
+<div class="form-froup row">
+
+    <label class="col-sm-2 col-form-label">Player Id</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="playerId" placeholder="Enter No playerId">
+    </div>
+    <label class="col-sm-2 col-form-label">Player Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="playerName" placeholder="Enter player Name">
+    </div>
+    <label class="col-sm-2 col-form-label">Event Id</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="eventId" placeholder="Enter Event Id">
+    </div>
+    <label class="col-sm-2 col-form-label">Event Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="eventName" placeholder="Enter Event Name">
+    </div>
+    
+    <label class="col-sm-2 col-form-label">Sports Name</label>
+    <div class="col-sm-10">
+        <select [(ngModel)]='sportsName' name="dropdownOption" id="dropdownOption" class='form-control' >
+            <option value="Chess">Chess</option>
+            <option value="Carrom">Carrom</option>
+            <option value="Cricket">Cricket</option>
+            <option value="Hockey">Hockey</option>
+            </select>
+    </div>
+    <label class="col-sm-2 col-form-label" *ngIf="user=='0'">Status</label>
+    <div class="col-sm-10">
+        <select [(ngModel)]='status' *ngIf="user=='0'" name="dropdownOption" id="dropdownOption" class='form-control' >
+            <option value="Approve">Approve</option>
+            <option value="Decline">Decline</option>
+            </select>
+    </div>
+
+</div>
+
+<button (click)="addParticipation()" *ngIf="parti.participationId==0" class="btn btn-primary">
+    Add
+</button>
+
+<button (click)="updateParticipation()" *ngIf="parti.participationId!=0" class="btn btn-primary">
+    Update
+</button>

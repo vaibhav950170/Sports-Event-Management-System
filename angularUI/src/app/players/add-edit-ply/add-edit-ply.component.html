@@ -1,0 +1,41 @@
+<div class="form-froup row">
+
+    <label class="col-sm-2 col-form-label">Player Name</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="playerName" placeholder="Enter Player Name">
+    </div>
+    <label class="col-sm-2 col-form-label">Age</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="age" placeholder="EnterAge">
+    </div>
+    <label class="col-sm-2 col-form-label">ContactNumber</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="contactNumber" placeholder="Enter ContactNumber">
+    </div>
+
+    <label class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="email" placeholder="Enter Email">
+    </div>
+    <label class="col-sm-2 col-form-label">Gender</label>
+    <div class="col-sm-10">
+        <input type="text" class="form-control" [(ngModel)]="gender" placeholder="Enter Gender">
+    </div>
+    <label class="col-sm-2 col-form-label">Sports Name</label>
+    <div class="col-sm-10">
+        <select [(ngModel)]='sportsName' name="dropdownOption" id="dropdownOption" class='form-control' >
+            <option value="Chess">Chess</option>
+            <option value="Carrom">Carrom</option>
+            <option value="Cricket">Cricket</option>
+            <option value="Hockey">Hockey</option>
+            </select>
+    </div>
+
+</div>
+
+
+
+<button (click)="addPlayers()" *ngIf="ply.PlayerId==0" class="btn btn-primary">
+    Add
+</button>
+
